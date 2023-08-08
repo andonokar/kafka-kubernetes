@@ -1,0 +1,20 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnector
+metadata:
+  name: connector-http-sink
+  namespace: kafka
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  class: io.aiven.kafka.connect.http.HttpSinkConnector
+  tasksMax: 1
+  config:
+    topics: teste-http
+    http.authorization.type: "none"
+    http.url: "https://web.postman.co/workspace/My-Workspace~b080a5dd-4749-4c85-8e67-eea00e10b5ef/api/773fbe15-d3f5-45e0-bfec-10a81487461f/collection/28941114-13d19c5e-1fc3-466c-8529-13b81957d383?action=share&creator=28941114"
+#    errors.tolerance: all
+#    mongo.errors.log.enable: true
+#    errors.log.include.messages: true
+#    errors.deadletterqueue.topic.name: teste-mongo-errors
+#    errors.deadletterqueue.context.headers.enable: true
+#    errors.deadletterqueue.topic.replication.factor: 1

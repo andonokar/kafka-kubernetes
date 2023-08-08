@@ -1,0 +1,33 @@
+apiVersion: kafka.strimzi.io/v1beta2
+
+kind: KafkaConnector
+
+metadata:
+
+  name: connector-s3-source
+
+  namespace: kafka
+
+  labels:
+
+    strimzi.io/cluster: my-cluster
+
+spec:
+
+  class: io.lenses.streamreactor.connect.aws.s3.source.S3SourceConnector
+
+  tasksMax: 1
+
+  config:
+
+    key.converter: io.confluent.connect.avro.AvroConverter
+
+    key.converter.schema.registry.url: 'http://schema-registry:8081'
+
+    value.converter: io.confluent.connect.avro.AvroConverter
+
+    value.converter.schema.registry.url: 'http://schema-registry:8081'
+
+    connect.s3.kcql: 'insert into repasse-topic select * from datalakerock-landing-zone-dev-329261866719:AFFIX/REPASSE/ STOREAS `avro`'
+
+    connect.s3.aws.region: us-east-1

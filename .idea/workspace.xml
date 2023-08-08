@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f04a2a7-2890-4097-af19-5124b75f35b5" name="Changes" comment="working kafka connect with confluent s3 source connector" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f91bb3a3-bcc6-46ed-a2ea-e65bfc047952" />
+        <option name="url" value="https://github.com/andonokar/kafka-kubernetes.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.aws/config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.aws/credentials" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2TCRRTN1Ae6JaX32GKnY2Un2LGf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/andonokar/kafka-kubernetes&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\mongo" />
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\secrets" />
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\configmaps" />
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\python-applications" />
+      <recent name="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\kafkaconnect" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.requesttest">
+    <configuration name="requesttest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kafka-kubernetes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python-applications" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python-applications/requesttest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testingproducer (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kafka-kubernetes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python-applications" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python-applications/testingproducer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testingproducer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kafka-kubernetes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="\\wsl$\Ubuntu\home\andonokar\kafka-kubernetes\python-applications\testingproducer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.requesttest" />
+        <item itemvalue="Python.testingproducer (1)" />
+        <item itemvalue="Python.testingproducer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f04a2a7-2890-4097-af19-5124b75f35b5" name="Changes" comment="" />
+      <created>1690545068006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690545068006</updated>
+    </task>
+    <task id="LOCAL-00001" summary="namespace kafka para kafka&#10;namespace monitoring para prometheus">
+      <created>1690545153034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690545153034</updated>
+    </task>
+    <task id="LOCAL-00002" summary="name change for better understanding">
+      <created>1690545301875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690545301875</updated>
+    </task>
+    <task id="LOCAL-00003" summary="name change for better understanding">
+      <created>1690545486340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690545486340</updated>
+    </task>
+    <task id="LOCAL-00004" summary="python tests">
+      <created>1690552503874</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690552503874</updated>
+    </task>
+    <task id="LOCAL-00005" summary="removed port foward">
+      <created>1690552537597</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690552537597</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add strimzi configuration">
+      <created>1690553269826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690553269826</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add kafka configuration">
+      <created>1690553300783</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690553300783</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated with new files, using helm for strimzi now">
+      <created>1690553329202</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690553329202</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated with new files, using helm for strimzi now">
+      <created>1690658550311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690658550311</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated for creating workers">
+      <created>1690658566932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690658566932</updated>
+    </task>
+    <task id="LOCAL-00011" summary="custom configs for kind to create workers">
+      <created>1690658721509</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690658721509</updated>
+    </task>
+    <task id="LOCAL-00012" summary="installing spark operator">
+      <created>1690659028665</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690659028665</updated>
+    </task>
+    <task id="LOCAL-00013" summary="spark-operator configuration filee">
+      <created>1690659356046</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690659356046</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change kind cluster configurations">
+      <created>1690807329903</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690807329903</updated>
+    </task>
+    <task id="LOCAL-00015" summary="documentation to refer to">
+      <created>1690808807650</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690808807650</updated>
+    </task>
+    <task id="LOCAL-00016" summary="testing schema registry for kafka">
+      <created>1690808818875</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690808818875</updated>
+    </task>
+    <task id="LOCAL-00017" summary="schema-registry-values">
+      <created>1690895912259</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1690895912259</updated>
+    </task>
+    <task id="LOCAL-00018" summary="camel s3 source kafka connector">
+      <created>1690895932573</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690895932574</updated>
+    </task>
+    <task id="LOCAL-00019" summary="updated to include schema registry">
+      <created>1690895949051</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1690895949051</updated>
+    </task>
+    <task id="LOCAL-00020" summary="kafka connect custom image build">
+      <created>1690895964601</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1690895964601</updated>
+    </task>
+    <task id="LOCAL-00021" summary="a default way to build secret for docker push">
+      <created>1690895986861</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1690895986861</updated>
+    </task>
+    <task id="LOCAL-00022" summary="updated to include secret to docker push custom kafka connect images">
+      <created>1690896113748</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690896113748</updated>
+    </task>
+    <task id="LOCAL-00023" summary="kafka confluent for s3 connector">
+      <created>1690902457854</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1690902457854</updated>
+    </task>
+    <task id="LOCAL-00024" summary="kafka connect custom image build with confluent s3 connector">
+      <created>1690902525320</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1690902525320</updated>
+    </task>
+    <task id="LOCAL-00025" summary="docker-secret">
+      <created>1690903788007</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1690903788007</updated>
+    </task>
+    <task id="LOCAL-00026" summary="aws-secret">
+      <created>1690903880650</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690903880650</updated>
+    </task>
+    <task id="LOCAL-00027" summary="including aws-secret">
+      <created>1690904249238</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690904249238</updated>
+    </task>
+    <task id="LOCAL-00028" summary="custom build including lenses s3 connect open source">
+      <created>1690931458884</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931458884</updated>
+    </task>
+    <task id="LOCAL-00029" summary="renamed file">
+      <created>1690931472850</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931472850</updated>
+    </task>
+    <task id="LOCAL-00030" summary="working kafka connect with confluent s3 source connector">
+      <created>1690931497445</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931497445</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="removed port foward" />
+    <MESSAGE value="add strimzi configuration" />
+    <MESSAGE value="add kafka configuration" />
+    <MESSAGE value="updated with new files, using helm for strimzi now" />
+    <MESSAGE value="updated for creating workers" />
+    <MESSAGE value="custom configs for kind to create workers" />
+    <MESSAGE value="installing spark operator" />
+    <MESSAGE value="spark-operator configuration filee" />
+    <MESSAGE value="change kind cluster configurations" />
+    <MESSAGE value="documentation to refer to" />
+    <MESSAGE value="testing schema registry for kafka" />
+    <MESSAGE value="schema-registry-values" />
+    <MESSAGE value="camel s3 source kafka connector" />
+    <MESSAGE value="updated to include schema registry" />
+    <MESSAGE value="kafka connect custom image build" />
+    <MESSAGE value="a default way to build secret for docker push" />
+    <MESSAGE value="updated to include secret to docker push custom kafka connect images" />
+    <MESSAGE value="kafka confluent for s3 connector" />
+    <MESSAGE value="kafka connect custom image build with confluent s3 connector" />
+    <MESSAGE value="docker-secret" />
+    <MESSAGE value="aws-secret" />
+    <MESSAGE value="including aws-secret" />
+    <MESSAGE value="custom build including lenses s3 connect open source" />
+    <MESSAGE value="renamed file" />
+    <MESSAGE value="working kafka connect with confluent s3 source connector" />
+    <option name="LAST_COMMIT_MESSAGE" value="working kafka connect with confluent s3 source connector" />
+  </component>
+</project>

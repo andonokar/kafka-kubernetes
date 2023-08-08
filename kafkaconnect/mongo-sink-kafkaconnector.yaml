@@ -1,0 +1,21 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnector
+metadata:
+  name: connector-mongo-sink
+  namespace: kafka
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  class: com.mongodb.kafka.connect.MongoSinkConnector
+  tasksMax: 1
+  config:
+    connection.uri: mongodb+srv://my-user:senha123@example-mongodb-svc.mongodb-database.svc.cluster.local/admin?replicaSet=example-mongodb&ssl=false
+    database: test
+    collection: teste-collection
+    topics: teste-mongo-3
+    mongo.errors.tolerance: all   
+    mongo.errors.log.enable: true  
+    errors.log.include.messages: true
+    errors.deadletterqueue.topic.name: teste-mongo-errors
+    errors.deadletterqueue.context.headers.enable: true
+    errors.deadletterqueue.topic.replication.factor: 1

@@ -1,0 +1,51 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnect
+metadata:
+  name: my-cluster
+  namespace: kafka
+  annotations:
+    strimzi.io/use-connector-resources: "true"
+spec:
+  replicas: 1
+  bootstrapServers: my-cluster-kafka-bootstrap:9092
+  image: docker.io/andonokar/kafka-connect-strimzi:1.8
+  config:
+    group.id: my-cluster
+    offset.storage.topic: my-cluster-offsets
+    config.storage.topic: my-cluster-configs
+    status.storage.topic: my-cluster-status
+    key.converter: org.apache.kafka.connect.json.JsonConverter
+    value.converter: org.apache.kafka.connect.json.JsonConverter
+    config.storage.replication.factor: 1
+    offset.storage.replication.factor: 1
+    status.storage.replication.factor: 1
+    config.providers: env
+    config.providers.env.class: io.strimzi.kafka.EnvVarConfigProvider
+  externalConfiguration:
+    env:
+      - name: AWS_ACCESS_KEY_ID
+        valueFrom:
+          secretKeyRef:
+            name: aws-secret
+            key: access-key
+      - name: AWS_SECRET_ACCESS_KEY
+        valueFrom:
+          secretKeyRef:
+            name: aws-secret
+            key: secret-access-key
+#  build:
+#    output:
+#      type: docker
+#      image: docker.io/andonokar/kafka-connect-strimzi:1.8
+#      pushSecret: docker-pass
+#    plugins:
+#      - name: classes
+#        artifacts:
+#          - type: zip
+#            url: https://d1i4a15mxbxib1.cloudfront.net/api/plugins/confluentinc/kafka-connect-s3-source/versions/2.5.5/confluentinc-kafka-connect-s3-source-2.5.5.zip
+#          - type: zip
+#            url: https://d1i4a15mxbxib1.cloudfront.net/api/plugins/confluentinc/kafka-connect-avro-converter/versions/7.4.1/confluentinc-kafka-connect-avro-converter-7.4.1.zip
+#          - type: zip
+#            url: https://d1i4a15mxbxib1.cloudfront.net/api/plugins/mongodb/kafka-connect-mongodb/versions/1.10.1/mongodb-kafka-connect-mongodb-1.10.1.zip
+#          - type: zip
+#            url: https://d1i4a15mxbxib1.cloudfront.net/api/plugins/confluentinc/kafka-connect-s3/versions/10.5.1/confluentinc-kafka-connect-s3-10.5.1.zip
