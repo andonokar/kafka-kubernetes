@@ -285,6 +285,9 @@ secret:
   - envName: AIRFLOW_CONN_KAFKA_CONSUMER_1
     secretName: kafka-secret
     secretKey: kafka-consumer-1
+  - envName: AIRFLOW_CONN_KAFKA_PRODUCER_1
+    secretName: kafka-secret
+    secretKey: kafka-producer-1
 # - envName: ""
 #   secretName: ""
 #   secretKey: ""
