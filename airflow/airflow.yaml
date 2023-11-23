@@ -272,7 +272,13 @@ allowPodLaunching: true
 # Environment variables for all airflow containers
 env:
   - name: AIRFLOW__API__AUTH_BACKENDS
-    value: airflow.api.auth.backend.default
+    value: airflow.api.auth.backend.basic_auth
+  - name: AIRFLOW__API__ACCESS_CONTROL_ALLOW_HEADERS
+    value: origin, content-type, accept
+  - name: AIRFLOW__API__ACCESS_CONTROL_ALLOW_METHODS
+    value: POST, GET, OPTIONS, DELETE
+  - name: AIRFLOW__API__ACCESS_CONTROL_ALLOW_ORIGINS
+    value: "https://airflow-webserver:8080 https://airflow-worker:8793 https://airflow-triggerer:8794"
 # - name: ""
 #   value: ""
 
