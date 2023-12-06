@@ -79,7 +79,7 @@ airflowVersion: "2.7.2"
 # Images
 images:
   airflow:
-    repository: andonokar/airflow
+    repository: "915484175192.dkr.ecr.us-east-1.amazonaws.com/dr_airflow"
     tag: "1.0"
     # Specifying digest takes precedence over tag.
     digest: ~
@@ -296,6 +296,9 @@ secret:
   - envName: AIRFLOW_CONN_KAFKA_PRODUCER_1
     secretName: kafka-secret
     secretKey: kafka-producer-1
+  - envName: AIRFLOW_CONN_AWS_CSN
+    secretName: kafka-secret
+    secretKey: aws-csn
 # - envName: ""
 #   secretName: ""
 #   secretKey: ""
@@ -503,7 +506,7 @@ kerberos:
 # Airflow Worker Config
 workers:
   # Number of airflow celery workers in StatefulSet
-  replicas: 1
+  replicas: 2
   # Max number of old replicasets to retain
   revisionHistoryLimit: ~
 
@@ -1162,7 +1165,7 @@ webserver:
     scheme: HTTP
 
   # Number of webservers
-  replicas: 1
+  replicas: 2
   # Max number of old replicasets to retain
   revisionHistoryLimit: ~
 
@@ -1344,7 +1347,7 @@ webserver:
 triggerer:
   enabled: true
   # Number of airflow triggerers in the deployment
-  replicas: 1
+  replicas: 2
   # Max number of old replicasets to retain
   revisionHistoryLimit: ~
 

@@ -7,6 +7,7 @@ sudo kubectl create namespace kafka
 sudo kubectl create namespace spark-operator
 #kubectl create namespace mongodb-database
 sudo kubectl create namespace airflow
+sudo kubectl create namespace python
 
 # Set airflow configmap volumes
 #kubectl apply -f airflow/requirements-configmap.yaml
